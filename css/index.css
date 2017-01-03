@@ -1,0 +1,81 @@
+.prograss{color: #ffffff;text-align: center;font-size: 0.34rem;width: 5.22rem;margin-top: 0.1rem;overflow: hidden;}
+.prograss>div{background-color: #b7740d;-webkit-transform: translateX(-100%);}
+
+.main1{background-size: 100% auto;}
+.index_img1{width: 3.66rem;left: -1.15rem;top: 0.4rem;}
+.index_img2{width: 2.77rem;right: -1rem;top: -1rem;}
+.index_img3{width: 4.21rem;left: -1.55rem;bottom: -0.9rem;}
+.index_img4{width: 1.92rem;right: 0.14rem;bottom: -0.4rem;}
+.active .index_img1{-webkit-animation:move1 0.5s 0.5s both;}
+.active .index_img2{-webkit-animation:move2 0.5s 1s both;}
+.active .index_img3{-webkit-animation:move3 0.5s 1.5s both;}
+.active .index_img4{-webkit-animation:move4 0.5s 2s both;}
+
+.main1 article{-webkit-transform: translateY(-50%);top: 50%;height: 6.75rem;z-index: 2;opacity: 0;}
+.main1.active article{-webkit-animation:fadeInUp 1s 2.5s both;}
+.main1 section{-webkit-transform:translateY(-50%) rotate(-15deg);top: 50%;height: 4.9rem;}
+
+.index_text{width: 2.22rem;left: 3.85rem;bottom: 0.85rem;}
+.index_hand{width: 1.02rem;left: 5.30rem;bottom: 0;}
+.index_hand2{width: 1.02rem;left:90%;top: 80%;}
+.active .index_hand,.active>.index_hand2{-webkit-animation: hand 0.5s infinite alternate;}
+
+@-webkit-keyframes move1{
+	from{-webkit-transform:translate3d(-100%,0,0) rotate(-30deg);}
+	to{-webkit-transform:translate3d(0%,0,0) rotate(0deg);}
+}
+@-webkit-keyframes move12{
+	from{-webkit-transform:translate3d(-100%,-20%,0) rotate(-30deg);opacity: 0;}
+	to{-webkit-transform:translate3d(0%,0,0) rotate(0deg);opacity: 1;}
+}
+@-webkit-keyframes move2{
+	from{-webkit-transform:translate3d(100%,0,0) rotate(-30deg);}
+	to{-webkit-transform:translate3d(0%,0,0) rotate(0deg);}
+}
+@-webkit-keyframes move3{
+	from{-webkit-transform:translate3d(-100%,0,0) rotate(-30deg);}
+	to{-webkit-transform:translate3d(0%,0,0) rotate(0deg);}
+}
+@-webkit-keyframes move4{
+	from{-webkit-transform:translate3d(200%,0,0) rotate(-30deg);}
+	to{-webkit-transform:translate3d(0%,0,0) rotate(0deg);}
+}
+@-webkit-keyframes fadeInUp{
+	from{-webkit-transform:translate3d(0,-60%,0);opacity: 0;}
+	to{-webkit-transform:translate3d(0,-50%,0);opacity: 1;}
+}
+@-webkit-keyframes hand{
+	from{-webkit-transform:scale(0.9,0.9);}
+	to{-webkit-transform:scale(1.1,1.1);}
+}
+
+
+.door{width: 100%;}
+
+/* entire container, keeps perspective */
+.flip-container {-webkit-perspective: 1000;}
+/* flip the pane when hovered */
+.flip-container.hover .flipper {-webkit-transform:translate3d(0,2px,0) rotateX(180deg);}
+/* flip speed goes here */
+.flipper {-webkit-transition: 0.8s;-webkit-transform-style: preserve-3d;-webkit-transform-origin: left top;position: relative;}
+/* hide back of pane during swap */
+.front, .back {-webkit-backface-visibility: hidden;position: absolute;top: 0;left: 0;}
+/* front pane, placed above back */
+.front {z-index: 2;}
+/* back, initially hidden pane */
+.back {-webkit-transform: rotateY(180deg);}
+
+.share,.share img{width: 100%;}
+.share{text-align: -webkit-center;height: 100%;}
+.share>div{padding-bottom: 2.6rem;}
+.frames2{width: 2.9rem;height: 3.66rem;margin-top: 0.6rem;margin-bottom: 0.24rem;}
+.frames2>img{position: absolute;}
+.bottom{left: 0;bottom: 5%;}
+
+.game_over{top: 6.2rem;}
+.over_img1{width: 3.9rem;left: 0.7rem;opacity: 0;top:0.45rem;}
+.active2 .over_img1{opacity: 1;-webkit-animation:move12 0.5s 0.5s both;}
+.over_img2,.over_img3{left: 1.4rem;width: 2.3rem;}
+.over_img2{top: 3.28rem;}
+.over_img3{top: 4.05rem;}
+.over_img4{top: 1.3rem;right: 0;width: 2.85rem;-webkit-transform: scale(-1,1);}

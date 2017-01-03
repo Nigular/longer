@@ -1,0 +1,55 @@
+html{-webkit-text-size-adjust: 100%;}
+body { margin: 0; -webkit-font-smoothing: antialiased;}
+body[data-move="true"]{-webkit-overflow-scrolling: touch;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary , video, canvas, img{ display: block; }
+
+a { background: transparent; text-decoration: none; color: black; }
+
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
+button, select { text-transform: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+
+html, button, input, select, textarea { font-family: arial, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', '黑体', '宋体', Tahoma, Arial, Helvetica, STHeiti;  }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none outside none; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #cccccc; }
+img{border: 0;background-color: transparent;}
+* {box-sizing: border-box; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+:focus{outline: none;}
+input,select{border-radius: 0;}
+
+.pos_r,main{position: relative;}
+.pos_a,.dialog{position: absolute;}
+[hidden],.hide{display: none!important;}
+.hide2{visibility: hidden;}
+.w100,.dialog{width: 100%;}
+.no_events,label>img{pointer-events: none;}
+
+html,body,main,.h100,.dialog{height: 100%;}
+html,body{font-size:0;}
+main{font-size: 0.0375rem;}
+main,.dialog{overflow: hidden;}
+.dialog,.loadMask{background-color: rgba(0,0,0,.7);z-index: 10086;top: 0;}
+.loadMask{background-color: #dcbb88;text-align: -webkit-center;}
+.loadMask,.share{display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: center;}
+/*.dialog>div{-webkit-transform-style: preserve-3d;-webkit-backface-visibility: hidden;-webkit-animation: show 0.5s both;}
+@-webkit-keyframes show{
+	from{opacity: 0;-webkit-transform: translateY(-20%);}
+	to{opacity: 1;-webkit-transform: translateY(0%);}
+}*/
+
+.loadMask>div{padding-bottom: 3rem;}
+.loadFps{width: 1.14rem;height: 1.15rem;overflow: hidden;/*outline: 1px solid;*/-webkit-transform: translate3d(0,0,0);}
+.loadFps>img{-webkit-animation: fps 2s steps(3) infinite;}
+@-webkit-keyframes fps{
+	to{-webkit-transform: translate3d(-127.5%,0,0);}
+}
+.load_down{bottom:10%;left: 0;}
+
+main,.dialog,.loadMask{width: 7.5rem;}
+main{margin: 0 auto;}
+.dialog,.loadMask{left: 50%;margin-left: -3.75rem;}
