@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>图片无缝轮播</title>
+		<script src="js/longer.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* { margin: 0; padding: 0;}
+			body{ background-color:#1B1B1B}
+			.box{ width: 800px; height: 150px; position: relative; margin: 100px auto;overflow: hidden;}
+			.box ul { width: 800px; height: 150px; position: relative; }
+			.box ul li { height: 150px; float: left; list-style: none; padding-right:20px;}
+			.box ul li img { width: 200px; height: 150px; display: inline-block;}
+			a{ color: #B4B4B4; }
+		</style>
+	</head>
+	<body data-move="false">
+		<div id="div1" class="box">
+			<ul>
+				<li><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+			</ul>			
+		</div>
+		<div id="div2" class="box">
+			<ul>
+				<li><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+			</ul>			
+		</div>
+	</body>
+	<script src="extends/autoScroll.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var scorller = new longer.autoScroll();
+		var box = longer.query.id("div1");
+		scorller.init({
+			dom:box,			//滚动元素的容器
+			direction:"left",	//left,right,up,down
+			loop:0,				//循环次数，0为无限循环
+			isEqual:true,		//子元素是否等宽或等高
+			scrollAmount:1,		//步长(像素)
+ 			scrollDelay:15,		//时长(毫秒)
+ 			mouseCtrl:true		//是否鼠标经过停止
+		});
+		
+		var scorller2 = new longer.autoScroll();
+		var box2 = longer.query.id("div2");
+		scorller.init({
+			dom:box2,			//滚动元素的容器
+			direction:"right",	//left,right,up,down
+			loop:0,				//循环次数，0为无限循环
+			isEqual:true,		//子元素是否等宽或等高
+			scrollAmount:1,		//步长(像素)
+ 			scrollDelay:15		//时长(毫秒)
+		});
+	</script>
+</html>

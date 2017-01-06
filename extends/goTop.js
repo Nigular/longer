@@ -1,19 +1,22 @@
 'use strict';
 var longer = window.longer || {};
-longer.GoTop = function() {
+longer.GoTop = function() {}
+/** 回到顶部 **/
 
-}
 longer.GoTop.prototype = {
 	constructor: longer.GoTop,
 	init: function(obj) {
 		var self = this;
 		self.curtime=0;
-		self.duration = obj.duration !== undefined ? obj.duration : 50;
-		console.log(document.documentElement.scrollTop);
+		if(arguments.length>0){
+			self.duration = obj.duration;
+		}else{
+			self.duration = 50;		
+		}
 		self.topvalue = document.body.scrollTop?document.body.scrollTop:document.documentElement.scrollTop;
 		self.enter();
 	},
-	Quad: {		//定义了三种缓动类型(tweenjs抄的)
+	Quad: {		//t:开始步数，b:初始值，c:变化值，d:结束步数
         easeIn: function(t, b, c, d) {
             return c * (t /= d) * t + b;
         },

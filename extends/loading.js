@@ -18,7 +18,6 @@ longer.Loading.prototype = {
 			[],
 			[]
 		];
-
 		self.callback = obj.callback;
 		self.enterCallback = obj.enterCallback;
 		self.count = 0;
